@@ -1,26 +1,26 @@
 import Image from "next/image";
 import { FaCamera, FaArrowDown, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
-
 export default function Home() {
   return (
     <div className="bg-brand-white text-brand-black font-sans scroll-smooth">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 w-full bg-brand-white/95 backdrop-blur-md z-50 border-b border-gray-200">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <nav className="fixed top-0 w-full h-20 bg-brand-white/95 backdrop-blur-md z-50 border-b border-gray-200">
+        <div className="container mx-auto px-6 h-full flex justify-between items-center">
+
           {/* Logo Dummy Hitam Putih */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 h-full">
             <div className="w-10 h-10 bg-brand-black text-brand-white flex items-center justify-center rounded-sm">
               <FaCamera size={20} />
             </div>
             <span className="text-xl font-black tracking-widest uppercase text-brand-black">
-              LENS<span className="text-brand-orange">.</span>CO
+              JULIAN<span className="text-brand-orange">.</span>PRODUCTIONS
             </span>
           </div>
 
           {/* Menu Navigasi */}
-          <ul className="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-wider">
+          <ul className="hidden md:flex items-center h-full gap-8 font-semibold text-sm uppercase tracking-wider">
             <li><a href="#beranda" className="hover:text-brand-orange transition-colors">Beranda</a></li>
             <li><a href="#tentang" className="hover:text-brand-orange transition-colors">Tentang</a></li>
             <li><a href="#layanan" className="hover:text-brand-orange transition-colors">Layanan</a></li>
@@ -28,9 +28,12 @@ export default function Home() {
           </ul>
 
           {/* Tombol Kontak Cepat */}
-          <a href="#kontak" className="hidden md:flex px-6 py-2 bg-brand-black text-brand-white text-sm font-bold hover:bg-brand-orange hover:text-brand-black transition-all rounded-full">
-            Hubungi Kami
-          </a>
+          <div className="hidden md:flex h-full items-center">
+            <a href="#kontak" className="inline-flex items-center justify-center px-6 py-2.5 bg-brand-black text-brand-white text-sm font-bold hover:bg-brand-orange hover:text-brand-black transition-all rounded-full leading-none">
+              Hubungi Kami
+            </a>
+          </div>
+
         </div>
       </nav>
 
@@ -97,7 +100,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION LAINNYA (Dibiarkan kosong/kerangka dulu untuk langkah selanjutnya) */}
         {/* 2. SECTION TENTANG KAMI */}
         <section id="tentang" className="min-h-screen py-24 px-6 bg-brand-white text-brand-black flex items-center justify-center overflow-hidden">
           <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
@@ -132,7 +134,7 @@ export default function Home() {
             {/* Bagian Kanan: Teks & Statistik */}
             <div className="w-full lg:w-1/2">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-brand-black mb-6 font-bold text-xs tracking-widest uppercase">
-                Mengenal LENS.CO
+                Mengenal JULIAN.PRODUCTIONS
               </div>
 
               <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
@@ -166,6 +168,7 @@ export default function Home() {
 
           </div>
         </section>
+
         {/* 3. SECTION LAYANAN/PRODUK */}
         <section id="layanan" className="min-h-screen py-24 px-6 bg-gray-50 flex items-center justify-center">
           <div className="container mx-auto">
@@ -258,6 +261,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         {/* 4. SECTION GALERI */}
         <section id="galeri" className="min-h-screen py-24 px-6 bg-brand-black text-brand-white">
           <div className="container mx-auto">
@@ -332,9 +336,138 @@ export default function Home() {
 
           </div>
         </section>
-        <section id="kontak" className="min-h-screen py-24 px-6 flex items-center justify-center"><h2 className="text-4xl font-bold">Hubungi <span className="text-brand-orange">Kami</span></h2></section>
+
+        {/* 5. SECTION KONTAK */}
+        <section id="kontak" className="min-h-screen py-24 px-6 bg-brand-white text-brand-black flex items-center justify-center">
+          <div className="container mx-auto max-w-6xl">
+
+            {/* Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-brand-black mb-6 font-bold text-xs tracking-widest uppercase">
+                Mari Berdiskusi
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black mb-4">
+                Hubungi <span className="text-brand-orange">Kami</span>
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                Punya konsep foto impian atau sekadar ingin tanya harga? Jangan ragu untuk menyapa tim kami.
+              </p>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-16 bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-xl">
+
+              {/* Bagian Kiri: Info Kontak */}
+              <div className="w-full lg:w-5/12 space-y-10">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6">Informasi Kontak</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-brand-black text-brand-orange rounded-full flex items-center justify-center shrink-0">
+                        <FaMapMarkerAlt size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-brand-black">Studio JULIAN.PRODUCTIONS</h4>
+                        <p className="text-gray-600 mt-1">Jl. Fotografi No. 123, Jambi<br />Indonesia, 36123</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-brand-black text-brand-orange rounded-full flex items-center justify-center shrink-0">
+                        <FaWhatsapp size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-brand-black">Telepon / WhatsApp</h4>
+                        <p className="text-gray-600 mt-1">+62 812-3456-7890</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-brand-black text-brand-orange rounded-full flex items-center justify-center shrink-0">
+                        <FaEnvelope size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-brand-black">Email</h4>
+                        <p className="text-gray-600 mt-1">hello@julianproductions.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-brand-black mb-4">Ikuti Kami</h4>
+                  <div className="flex gap-4">
+                    <a href="#" className="w-12 h-12 rounded-full bg-brand-white border-2 border-gray-200 text-brand-black flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors shadow-sm">
+                      <FaInstagram size={24} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bagian Kanan: Form UI Dummy & Tombol WA */}
+              <div className="w-full lg:w-7/12 bg-brand-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 className="text-2xl font-bold mb-6">Kirim Pesan</h3>
+                <form className="space-y-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">Nama Lengkap</label>
+                      <input type="text" className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all" placeholder="John Doe" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">No. WhatsApp</label>
+                      <input type="text" className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all" placeholder="0812-xxxx-xxxx" />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">Ceritakan Kebutuhanmu</label>
+                    <textarea rows={4} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all resize-none" placeholder="Saya ingin foto pre-wedding bulan depan..."></textarea>
+                  </div>
+
+                  {/* Tombol Aksi */}
+                  <div className="pt-2 flex flex-col sm:flex-row gap-4">
+                    <button type="button" className="flex-1 py-4 bg-brand-black text-brand-white font-bold rounded-xl hover:bg-gray-800 transition-colors">
+                      Kirim Pesan
+                    </button>
+                    {/* Tombol Asli untuk direct WA */}
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex-1 py-4 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#128C7E] transition-colors flex items-center justify-center gap-2 shadow-lg">
+                      <FaWhatsapp size={24} />
+                      Chat via WA
+                    </a>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </section>
 
       </main>
+
+      {/* FOOTER */}
+      <footer className="bg-brand-black text-brand-white pt-16 pb-8 border-t-[10px] border-brand-orange">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-brand-white text-brand-black flex items-center justify-center rounded-sm">
+                <FaCamera size={20} />
+              </div>
+              <span className="text-2xl font-black tracking-widest uppercase">
+                JULIAN<span className="text-brand-orange">.</span>PRODUCTIONS
+              </span>
+            </div>
+
+            <ul className="flex flex-wrap justify-center gap-6 md:gap-10 font-medium text-gray-400">
+              <li><a href="#beranda" className="hover:text-brand-orange transition-colors">Beranda</a></li>
+              <li><a href="#tentang" className="hover:text-brand-orange transition-colors">Tentang</a></li>
+              <li><a href="#layanan" className="hover:text-brand-orange transition-colors">Layanan</a></li>
+              <li><a href="#galeri" className="hover:text-brand-orange transition-colors">Galeri</a></li>
+            </ul>
+          </div>
+
+          <div className="text-center pt-8 border-t border-gray-800 text-gray-500 text-sm">
+            <p>&copy; {new Date().getFullYear()} JULIAN.PRODUCTIONS Photography. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
