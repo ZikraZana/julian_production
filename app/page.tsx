@@ -10,7 +10,7 @@ export default function Home() {
         <div className="container mx-auto px-6 h-full flex justify-between items-center">
 
           {/* Logo Dummy Hitam Putih */}
-          <div className="flex items-center gap-2 h-full">
+          <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-brand-black text-brand-white flex items-center justify-center rounded-sm">
               <FaCamera size={20} />
             </div>
@@ -20,7 +20,7 @@ export default function Home() {
           </div>
 
           {/* Menu Navigasi */}
-          <ul className="hidden md:flex items-center h-full gap-8 font-semibold text-sm uppercase tracking-wider">
+          <ul className="hidden md:flex items-center h-full gap-8 font-semibold text-sm uppercase tracking-wider mr-38">
             <li><a href="#beranda" className="hover:text-brand-orange transition-colors">Beranda</a></li>
             <li><a href="#tentang" className="hover:text-brand-orange transition-colors">Tentang</a></li>
             <li><a href="#layanan" className="hover:text-brand-orange transition-colors">Layanan</a></li>
@@ -50,7 +50,7 @@ export default function Home() {
               {/* Badge Kecil */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-orange/50 text-brand-orange mb-6">
                 <FaCamera />
-                <span className="text-xs font-bold tracking-widest uppercase">Studio Fotografi Profesional</span>
+                <span className="text-xs font-bold tracking-widest uppercase">Fotografi Profesional</span>
               </div>
 
               {/* Headline */}
@@ -60,7 +60,7 @@ export default function Home() {
 
               {/* Sub-headline */}
               <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
-                Dari momen pre-wedding yang romantis hingga foto produk yang elegan, kami hadir untuk membekukan setiap momen berhargamu menjadi karya seni yang abadi.
+                Momen-momen foto wisuda hingga foto produk yang elegan, kami hadir untuk membekukan setiap momen berhargamu menjadi karya seni yang abadi.
               </p>
 
               {/* Tombol CTA */}
@@ -145,18 +145,14 @@ export default function Home() {
                 Kami adalah studio fotografi yang didedikasikan untuk mengabadikan momen terpenting dalam hidup Anda. Dengan pendekatan artistik dan perhatian penuh pada detail, kami memastikan setiap jepretan memiliki cerita dan emosi yang autentik.
               </p>
 
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                Tim profesional kami siap mendampingi Anda, mulai dari menyusun konsep hingga eksekusi akhir, memberikan pengalaman sesi foto yang santai namun dengan hasil akhir yang luar biasa.
-              </p>
-
               {/* Statistik Pencapaian */}
               <div className="flex flex-wrap gap-8 border-t border-gray-200 pt-8">
                 <div>
-                  <h3 className="text-4xl font-black text-brand-orange mb-1">5+</h3>
+                  <h3 className="text-4xl font-black text-brand-orange mb-1">3+</h3>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Tahun Pengalaman</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-black text-brand-orange mb-1">500+</h3>
+                  <h3 className="text-4xl font-black text-brand-orange mb-1">100+</h3>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Klien Bahagia</p>
                 </div>
                 <div>
@@ -328,7 +324,7 @@ export default function Home() {
 
             {/* Tombol Lihat Lebih Banyak */}
             <div className="mt-16 text-center">
-              <a href="#" className="inline-flex items-center gap-3 px-8 py-3 border-2 border-brand-orange text-brand-orange font-bold rounded-full hover:bg-brand-orange hover:text-brand-black transition-colors">
+              <a href="https://www.instagram.com/julian.productions_" className="inline-flex items-center gap-3 px-8 py-3 border-2 border-brand-orange text-brand-orange font-bold rounded-full hover:bg-brand-orange hover:text-brand-black transition-colors" target="_blank">
                 <FaInstagram size={20} />
                 Lihat Lebih Banyak di IG
               </a>
@@ -366,8 +362,8 @@ export default function Home() {
                         <FaMapMarkerAlt size={20} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-brand-black">Studio JULIAN.PRODUCTIONS</h4>
-                        <p className="text-gray-600 mt-1">Jl. Fotografi No. 123, Jambi<br />Indonesia, 36123</p>
+                        <h4 className="font-bold text-brand-black">JULIAN.PRODUCTIONS</h4>
+                        <p className="text-gray-600 mt-1">Jambi, Indonesia</p>
                       </div>
                     </div>
 
