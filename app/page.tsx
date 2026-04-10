@@ -1,25 +1,40 @@
+import Image from "next/image";
 import { FaCamera, FaArrowDown, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+
+import localFont from 'next/font/local';
+
+// Inisialisasi font lokal
+const customFont = localFont({ 
+  // Sesuaikan nama file ini dengan nama file font yang kamu masukkan ke folder fonts
+  src: './fonts/Nulshock Bd.otf', 
+  display: 'swap',
+});
+
+const bodyFont = localFont({ 
+  // Sesuaikan nama file ini dengan nama file font yang kamu masukkan ke folder fonts
+  src: './fonts/Nasalization Rg.otf', 
+  display: 'swap',
+});
 
 export default function Home() {
   return (
-    <div className="bg-brand-black text-brand-white font-sans scroll-smooth">
+    <div className={`bg-brand-black text-brand-white ${bodyFont.className} scroll-smooth`}>
 
       {/* NAVBAR */}
       <nav className="fixed top-0 w-full h-20 bg-brand-black/75 backdrop-blur-sm z-50 border-b border-gray-800">
         <div className="container mx-auto px-6 h-full flex justify-between items-center">
 
           {/* Logo */}
-          <div className="flex items-center gap-2 h-full">
-            <div className="w-10 h-10 bg-brand-white text-brand-black flex items-center justify-center rounded-sm">
-              <FaCamera size={20} />
-            </div>
-            <span className="text-xl font-black tracking-widest uppercase text-brand-white">
+          <a href="#beranda" className="flex items-center gap-3 h-full hover:opacity-80 transition-opacity">
+
+            {/* Class font custom ditambahkan di sini */}
+            <span className={`text-xl font-black tracking-widest uppercase text-brand-white ${customFont.className}`}>
               JULIAN<span className="text-brand-orange">.</span>PRODUCTIONS
             </span>
-          </div>
+          </a>
 
           {/* Menu Navigasi */}
-          <ul className="hidden md:flex items-center h-full gap-8 font-semibold text-sm uppercase tracking-wider text-gray-300 mr-47.5">
+          <ul className="hidden md:flex items-center h-full gap-8 font-semibold text-sm uppercase tracking-wider text-gray-300 mr-45.5">
             <li>
               <a
                 href="#beranda"
@@ -99,14 +114,22 @@ export default function Home() {
 
             {/* Bagian Kanan: Gambar Featured */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
+              
+              {/* Ini adalah div GLOW (Blur), gambarmu JANGAN ditaruh di dalam sini */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-orange/20 blur-[100px] rounded-full z-0"></div>
-              <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
-                <img
-                  src="https://images.unsplash.com/photo-1554046920-90dc20696342?q=80&w=800&auto=format&fit=crop"
+              
+              {/* Ini adalah Frame tempat gambarmu seharusnya berada */}
+              <div className="relative z-10 w-full max-w-md aspect-[4/5] hover:scale-110 rounded-3xl overflow-hidden transition-transform duration-500">
+                <Image
+                  src="/logo/logo_JP.png" 
                   alt="Karya Fotografi"
+                  width={800} 
+                  height={1000} 
                   className="w-full h-full object-cover"
+                  priority
                 />
               </div>
+
             </div>
 
           </div>
@@ -123,26 +146,20 @@ export default function Home() {
         <section id="tentang" className="min-h-screen py-24 px-6 flex items-center justify-center overflow-hidden">
           <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
 
-            {/* Bagian Kiri: Kolase Gambar */}
-            <div className="w-full lg:w-1/2 relative">
-              <div className="grid grid-cols-2 gap-4 relative z-10">
-                <div className="mt-12 rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
-                  <img
-                    src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600&auto=format&fit=crop"
-                    alt="Fotografer beraksi"
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
-                <div className="mb-12 rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
-                  <img
-                    src="https://images.unsplash.com/photo-1520390116614-d537f8e77241?q=80&w=600&auto=format&fit=crop"
-                    alt="Kamera"
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
+            {/* Bagian Kiri: Gambar Tunggal */}
+            <div className="w-full lg:w-1/2 relative lg:pr-10">
+              {/* Bingkai Gambar */}
+              <div className="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border border-gray-800">
+                <img
+                  src="https://amateurphotographer.com/wp-content/uploads/sites/7/2022/08/Tim-Coleman-AP-Nikon-Z30-product-shot_1_820px.jpg"
+                  alt="Kamera Nikon Z-30"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 bg-gray-800"
+                />
               </div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gray-900 rounded-full z-0"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-brand-orange/20 rounded-full blur-xl z-0"></div>
+
+              {/* Dekorasi Background */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-orange/10 blur-[80px] rounded-full z-0"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-orange/20 rounded-full blur-2xl z-0 animate-pulse"></div>
             </div>
 
             {/* Bagian Kanan: Teks & Statistik */}
@@ -165,15 +182,15 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-8 border-t border-gray-800 pt-8">
                 <div>
-                  <h3 className="text-4xl font-black text-brand-orange mb-1">5+</h3>
+                  <h3 className="text-4xl font-black text-brand-orange mb-1">3+</h3>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Tahun Pengalaman</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-black text-brand-orange mb-1">500+</h3>
+                  <h3 className="text-4xl font-black text-brand-orange mb-1">75+</h3>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Klien Bahagia</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-black text-brand-orange mb-1">100%</h3>
+                  <h3 className="text-4xl font-black text-brand-orange mb-1">80%</h3>
                   <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Profesional</p>
                 </div>
               </div>
@@ -198,49 +215,49 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-              {/* Card 1 */}
-              <div className="card bg-[#111111] shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800">
-                <div className="card-body">
-                  <h3 className="card-title text-2xl font-bold text-brand-white">Portrait Session</h3>
-                  <p className="text-gray-400 mb-4">Cocok untuk personal branding, wisuda, atau katalog produk simpel.</p>
-                  <div className="text-4xl font-black text-brand-white mb-6">
-                    Rp 500<span className="text-lg text-gray-500 font-medium">rb</span>
+              {/* Card 1: Portrait */}
+              <div className="card bg-black shadow-2xl border border-gray-800 border-t-4 border-t-brand-orange relative overflow-hidden flex flex-col w-full">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-brand-orange/10 blur-[50px] pointer-events-none"></div>
+                {/* flex-1 di sini adalah kunci utamanya */}
+                <div className="card-body relative z-10 flex flex-col flex-1">
+                  <h3 className="card-title text-2xl font-bold text-brand-orange">Portrait</h3>
+                  <p className="text-gray-400 mb-4">Cocok untuk personal branding, foto profil profesional, atau sekadar tampil keren.</p>
+                  <div className="text-4xl font-black text-brand-white mb-6 mt-auto">
+                    Rp 300<span className="text-lg text-gray-500 font-medium">rb</span>
                   </div>
                   <ul className="flex flex-col gap-3 mb-8 text-gray-300">
-                    <li className="flex items-center gap-2">✓ 2 Jam Sesi Foto</li>
-                    <li className="flex items-center gap-2">✓ 15 Foto Edit Pilihan</li>
+                    <li className="flex items-center gap-2">✓ 1 Jam Sesi Foto</li>
+                    <li className="flex items-center gap-2">✓ 10 Foto Edit Pilihan</li>
                     <li className="flex items-center gap-2">✓ Semua File Asli (Google Drive)</li>
                     <li className="flex items-center gap-2 opacity-40 line-through">Cetak Album Fisik</li>
                   </ul>
-                  <div className="card-actions justify-center">
-                    <a href="#kontak" className="w-full py-3 rounded-full border-2 border-brand-white text-brand-white font-bold hover:bg-brand-white hover:text-brand-black transition-colors text-center">
+                  <div className="card-actions justify-center mt-auto w-full pt-4 border-t border-gray-800/50">
+                    <a href="#kontak" className="w-full py-3 rounded-full bg-brand-orange text-brand-black font-bold hover:bg-orange-500 transition-colors text-center shadow-[0_0_15px_rgba(248,173,56,0.2)]">
                       Pilih Paket
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Card 2 (Best Seller) */}
-              <div className="card bg-black shadow-2xl transform md:-translate-y-4 border border-gray-800 border-t-4 border-t-brand-orange relative overflow-hidden">
+              {/* Card 2: Cosplay (Best Seller) */}
+              {/* Efek melayang (translate-y) dihapus agar sejajar 100% */}
+              <div className="card bg-black shadow-2xl border border-gray-800 border-t-4 border-t-brand-orange relative overflow-hidden flex flex-col w-full">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-brand-orange/10 blur-[50px] pointer-events-none"></div>
-                <div className="card-body relative z-10">
-                  <div className="absolute top-0 right-0 bg-brand-orange text-brand-black text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">
-                    BEST SELLER
-                  </div>
-                  <h3 className="card-title text-2xl font-bold text-brand-orange">Pre-Wedding</h3>
-                  <p className="text-gray-400 mb-4">Paket favorit untuk mengabadikan kisah cinta sebelum hari bahagia.</p>
-                  <div className="text-4xl font-black text-brand-white mb-6">
-                    Rp 2.5<span className="text-lg text-gray-500 font-medium">jt</span>
+                <div className="card-body relative z-10 flex flex-col flex-1">
+                  <h3 className="card-title text-2xl font-bold text-brand-orange pt-2">Cosplay</h3>
+                  <p className="text-gray-400 mb-4">Abadikan karakter favoritmu dengan pencahayaan dan mood dramatis yang epik.</p>
+                  <div className="text-3xl lg:text-4xl font-black text-brand-white mb-6 leading-tight mt-auto">
+                    Rp 15<span className="text-lg text-gray-500 font-medium">rb</span> - 30<span className="text-lg text-gray-500 font-medium">rb</span>
                   </div>
                   <ul className="flex flex-col gap-3 mb-8 text-gray-300">
-                    <li className="flex items-center gap-2">✓ Seharian Penuh (Max 8 Jam)</li>
-                    <li className="flex items-center gap-2">✓ 50 Foto Edit Premium</li>
-                    <li className="flex items-center gap-2">✓ 2 Lokasi Outdoor/Indoor</li>
-                    <li className="flex items-center gap-2">✓ Cetak 1 Frame Canvas 40x60cm</li>
+                    <li className="flex items-center gap-2">✓ 3 Jam Sesi (Studio/Outdoor)</li>
+                    <li className="flex items-center gap-2">✓ 20 Foto Edit + Retouch Efek</li>
+                    <li className="flex items-center gap-2">✓ Pengarahan Pose Karakter</li>
+                    <li className="flex items-center gap-2">✓ Semua File Asli High-Res</li>
                   </ul>
-                  <div className="card-actions justify-center">
+                  <div className="card-actions justify-center mt-auto w-full pt-4 border-t border-gray-800/50">
                     <a href="#kontak" className="w-full py-3 rounded-full bg-brand-orange text-brand-black font-bold hover:bg-orange-500 transition-colors text-center shadow-[0_0_15px_rgba(248,173,56,0.2)]">
                       Pesan Sekarang
                     </a>
@@ -248,22 +265,23 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Card 3 */}
-              <div className="card bg-[#111111] shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800">
-                <div className="card-body">
-                  <h3 className="card-title text-2xl font-bold text-brand-white">Wedding / Event</h3>
-                  <p className="text-gray-400 mb-4">Dokumentasi komprehensif untuk acara pernikahan atau event besar.</p>
-                  <div className="text-4xl font-black text-brand-white mb-6">
-                    Rp 4.5<span className="text-lg text-gray-500 font-medium">jt</span>
+              {/* Card 3: Wisuda */}
+              <div className="card bg-black shadow-2xl border border-gray-800 border-t-4 border-t-brand-orange relative overflow-hidden flex flex-col w-full">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-brand-orange/10 blur-[50px] pointer-events-none"></div>
+                <div className="card-body relative z-10 flex flex-col flex-1">
+                  <h3 className="card-title text-2xl font-bold text-brand-orange">Wisuda</h3>
+                  <p className="text-gray-400 mb-4">Rayakan momen kelulusanmu bersama keluarga dan sahabat terdekat.</p>
+                  <div className="text-4xl font-black text-brand-white mb-6 mt-auto">
+                    Rp 500<span className="text-lg text-gray-500 font-medium">rb</span>
                   </div>
                   <ul className="flex flex-col gap-3 mb-8 text-gray-300">
-                    <li className="flex items-center gap-2">✓ 2 Fotografer + 1 Videografer</li>
-                    <li className="flex items-center gap-2">✓ Video Cinematic 3-5 Menit</li>
-                    <li className="flex items-center gap-2">✓ Cetak Album Eksklusif 100 Hal</li>
-                    <li className="flex items-center gap-2">✓ Flashdisk Isi Semua File</li>
+                    <li className="flex items-center gap-2">✓ 2 Jam Sesi Foto Grup</li>
+                    <li className="flex items-center gap-2">✓ 25 Foto Edit Pilihan</li>
+                    <li className="flex items-center gap-2">✓ Cetak 1 Frame 10R</li>
+                    <li className="flex items-center gap-2">✓ Flashdisk / Link G-Drive</li>
                   </ul>
-                  <div className="card-actions justify-center">
-                    <a href="#kontak" className="w-full py-3 rounded-full border-2 border-brand-white text-brand-white font-bold hover:bg-brand-white hover:text-brand-black transition-colors text-center">
+                  <div className="card-actions justify-center mt-auto w-full pt-4 border-t border-gray-800/50">
+                    <a href="#kontak" className="w-full py-3 rounded-full bg-brand-orange text-brand-black font-bold hover:bg-orange-500 transition-colors text-center shadow-[0_0_15px_rgba(248,173,56,0.2)]">
                       Pilih Paket
                     </a>
                   </div>
@@ -377,7 +395,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-bold text-brand-white">Telepon / WhatsApp</h4>
-                        <p className="text-gray-400 mt-1">+62 812-3456-7890</p>
+                        <p className="text-gray-400 mt-1">+62 822-8061-9853</p>
                       </div>
                     </div>
 
@@ -426,7 +444,7 @@ export default function Home() {
                     <button type="button" className="flex-1 py-4 bg-transparent border-2 border-brand-white text-brand-white font-bold rounded-xl hover:bg-brand-white hover:text-brand-black transition-colors">
                       Kirim Pesan
                     </button>
-                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex-1 py-4 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#128C7E] transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20">
+                    <a href="https://wa.me/6282280619853" target="_blank" rel="noopener noreferrer" className="flex-1 py-4 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#128C7E] transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20">
                       <FaWhatsapp size={24} />
                       Chat via WA
                     </a>
