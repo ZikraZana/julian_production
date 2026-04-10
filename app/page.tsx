@@ -80,7 +80,7 @@ export default function Home() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-orange/20 blur-[100px] rounded-full z-0"></div>
 
               {/* Frame Gambar */}
-              <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+              <div className="relative z-10 w-full max-w-md aspect-4/5 rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img
                   src="https://images.unsplash.com/photo-1554046920-90dc20696342?q=80&w=800&auto=format&fit=crop"
                   alt="Karya Fotografi"
@@ -108,7 +108,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 relative">
               <div className="grid grid-cols-2 gap-4 relative z-10">
                 {/* Gambar 1 (Agak turun) */}
-                <div className="mt-12 rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
+                <div className="mt-12 rounded-2xl overflow-hidden shadow-xl aspect-3/4">
                   <img
                     src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600&auto=format&fit=crop"
                     alt="Fotografer beraksi"
@@ -116,7 +116,7 @@ export default function Home() {
                   />
                 </div>
                 {/* Gambar 2 (Agak naik) */}
-                <div className="mb-12 rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
+                <div className="mb-12 rounded-2xl overflow-hidden shadow-xl aspect-3/4">
                   <img
                     src="https://images.unsplash.com/photo-1520390116614-d537f8e77241?q=80&w=600&auto=format&fit=crop"
                     alt="Kamera"
@@ -126,7 +126,7 @@ export default function Home() {
               </div>
 
               {/* Dekorasi Background */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gray-100 rounded-full z-0"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gray-100 rounded-full z-0"></div>
               {/* Aksen titik-titik oranye (opsional) */}
               <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-brand-orange/20 rounded-full blur-xl z-0"></div>
             </div>
@@ -439,7 +439,7 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-brand-black text-brand-white pt-16 pb-8 border-t-[10px] border-brand-orange">
+      <footer className="bg-brand-black text-brand-white pt-16 pb-8 border-t-10px border-brand-orange">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
             <div className="flex items-center gap-2">
