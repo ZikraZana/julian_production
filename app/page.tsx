@@ -38,7 +38,7 @@ export default function Home() {
             <li>
               <a
                 href="#beranda"
-                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
+                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
               >
                 Beranda
               </a>
@@ -46,7 +46,7 @@ export default function Home() {
             <li>
               <a
                 href="#tentang"
-                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
+                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
               >
                 Tentang
               </a>
@@ -54,7 +54,7 @@ export default function Home() {
             <li>
               <a
                 href="#layanan"
-                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
+                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
               >
                 Layanan
               </a>
@@ -62,7 +62,7 @@ export default function Home() {
             <li>
               <a
                 href="#galeri"
-                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
+                className="relative py-1 font-bold hover:text-brand-orange transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 hover:after:w-full"
               >
                 Galeri
               </a>
@@ -119,7 +119,7 @@ export default function Home() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-orange/20 blur-[100px] rounded-full z-0"></div>
               
               {/* Ini adalah Frame tempat gambarmu seharusnya berada */}
-              <div className="relative z-10 w-full max-w-md aspect-[4/5] hover:scale-110 rounded-3xl overflow-hidden transition-transform duration-500">
+              <div className="relative z-10 w-full max-w-md aspect-4/5 hover:scale-110 rounded-3xl overflow-hidden transition-transform duration-500">
                 <Image
                   src="/logo/logo_JP.png" 
                   alt="Karya Fotografi"
@@ -149,7 +149,7 @@ export default function Home() {
             {/* Bagian Kiri: Gambar Tunggal */}
             <div className="w-full lg:w-1/2 relative lg:pr-10">
               {/* Bingkai Gambar */}
-              <div className="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border border-gray-800">
+              <div className="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl aspect-4/5 border border-gray-800">
                 <img
                   src="https://amateurphotographer.com/wp-content/uploads/sites/7/2022/08/Tim-Coleman-AP-Nikon-Z30-product-shot_1_820px.jpg"
                   alt="Kamera Nikon Z-30"
