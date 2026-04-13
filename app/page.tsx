@@ -4,15 +4,15 @@ import { FaCamera, FaArrowDown, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaEnvel
 import localFont from 'next/font/local';
 
 // Inisialisasi font lokal
-const customFont = localFont({ 
+const customFont = localFont({
   // Sesuaikan nama file ini dengan nama file font yang kamu masukkan ke folder fonts
-  src: './fonts/Nulshock Bd.otf', 
+  src: './fonts/Nulshock Bd.otf',
   display: 'swap',
 });
 
-const bodyFont = localFont({ 
+const bodyFont = localFont({
   // Sesuaikan nama file ini dengan nama file font yang kamu masukkan ke folder fonts
-  src: './fonts/Nasalization Rg.otf', 
+  src: './fonts/Nasalization Rg.otf',
   display: 'swap',
 });
 
@@ -114,17 +114,17 @@ export default function Home() {
 
             {/* Bagian Kanan: Gambar Featured */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
-              
+
               {/* Ini adalah div GLOW (Blur), gambarmu JANGAN ditaruh di dalam sini */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-orange/20 blur-[100px] rounded-full z-0"></div>
-              
+
               {/* Ini adalah Frame tempat gambarmu seharusnya berada */}
               <div className="relative z-10 w-full max-w-md aspect-4/5 hover:scale-110 rounded-3xl overflow-hidden transition-transform duration-500">
                 <Image
-                  src="/logo/logo_JP.png" 
+                  src="/logo/logo_JP.png"
                   alt="Karya Fotografi"
-                  width={800} 
-                  height={1000} 
+                  width={800}
+                  height={1000}
                   className="w-full h-full object-cover"
                   priority
                 />
@@ -304,50 +304,97 @@ export default function Home() {
                 Galeri <span className="text-brand-orange">Karya</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                Beberapa momen ajaib yang berhasil kami abadikan. Biarkan karya kami yang berbicara.
+                Beberapa momen ajaib yang berhasil kami abadikan dengan rasio potret 4:5 yang elegan.
               </p>
             </div>
 
-            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-              {/* Item 1 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600&auto=format&fit=crop" alt="Gallery 1" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+            {/* Perubahan Utama: Mengubah columns menjadi grid agar rasionya seragam */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+              {/* Item 1 - Menambahkan aspect-[4/5] pada pembungkus gambar */}
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_1.jpg"
+                  alt="Gallery 1"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
               {/* Item 2 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600&auto=format&fit=crop" alt="Gallery 2" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_2.jpg"
+                  alt="Gallery 2"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
               {/* Item 3 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" alt="Gallery 3" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_3.jpg"
+                  alt="Gallery 3"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
               {/* Item 4 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1532712938730-4e36c457d913?q=80&w=600&auto=format&fit=crop" alt="Gallery 4" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_4.jpg"
+                  alt="Gallery 4"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
               {/* Item 5 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=600&auto=format&fit=crop" alt="Gallery 5" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_5.jpg"
+                  alt="Gallery 5"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
               {/* Item 6 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=600&auto=format&fit=crop" alt="Gallery 6" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_6.jpg"
+                  alt="Gallery 6"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
               {/* Item 7 */}
-              <div className="break-inside-avoid relative group overflow-hidden rounded-xl cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1505934333218-8fe21ff88d40?q=80&w=600&auto=format&fit=crop" alt="Gallery 7" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_7.jpg"
+                  alt="Gallery 7"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
               </div>
+
+              {/* Item 8 (Menambahkan satu item lagi agar grid-nya genap/penuh) */}
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+                <img
+                  src="/gallery/gambar_8.jpg"
+                  alt="Gallery 8"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-brand-orange/0 group-hover:bg-brand-orange/20 transition-colors duration-500"></div>
+              </div>
+
             </div>
 
             <div className="mt-16 text-center">
-              <a href="#" className="inline-flex items-center gap-3 px-8 py-3 border-2 border-brand-orange text-brand-orange font-bold rounded-full hover:bg-brand-orange hover:text-brand-black transition-colors">
+              <a href="https://www.instagram.com/julian_productionn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-3 border-2 border-brand-orange text-brand-orange font-bold rounded-full hover:bg-brand-orange hover:text-brand-black transition-colors">
                 <FaInstagram size={20} />
                 Lihat Lebih Banyak di IG
               </a>
