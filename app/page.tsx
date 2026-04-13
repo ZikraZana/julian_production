@@ -312,7 +312,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
               {/* Item 1 - Menambahkan aspect-[4/5] pada pembungkus gambar */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_1.jpg"
                   alt="Gallery 1"
@@ -322,7 +322,7 @@ export default function Home() {
               </div>
 
               {/* Item 2 */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_2.jpg"
                   alt="Gallery 2"
@@ -332,7 +332,7 @@ export default function Home() {
               </div>
 
               {/* Item 3 */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_3.jpg"
                   alt="Gallery 3"
@@ -342,7 +342,7 @@ export default function Home() {
               </div>
 
               {/* Item 4 */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_4.jpg"
                   alt="Gallery 4"
@@ -352,7 +352,7 @@ export default function Home() {
               </div>
 
               {/* Item 5 */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_5.jpg"
                   alt="Gallery 5"
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
 
               {/* Item 6 */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_6.jpg"
                   alt="Gallery 6"
@@ -372,7 +372,7 @@ export default function Home() {
               </div>
 
               {/* Item 7 */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_7.jpg"
                   alt="Gallery 7"
@@ -382,7 +382,7 @@ export default function Home() {
               </div>
 
               {/* Item 8 (Menambahkan satu item lagi agar grid-nya genap/penuh) */}
-              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-[4/5] border border-gray-800">
+              <div className="relative group overflow-hidden rounded-xl cursor-pointer aspect-4/5 border border-gray-800">
                 <img
                   src="/gallery/gambar_8.jpg"
                   alt="Gallery 8"
